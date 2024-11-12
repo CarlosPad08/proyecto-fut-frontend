@@ -1,0 +1,102 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.contenedor {
+    border: 2px solid rgb(0, 233, 144);
+    width: 80vw;
+    height: 80vw;
+    max-width: 400px;
+    max-height: 400px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    box-sizing: border-box;
+    margin-right: 4vw; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+input[type="radio"]:checked + .contenedor {
+    display: block;
+}
+
+.contenedor h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    font-size: 30px;
+    color: rgb(0, 233, 144);
+    text-align: center;
+}
+
+.contenedor .elemento label {
+    color: rgb(0, 233, 144);
+}
+
+.contenedor .elemento input {
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 30px;
+}
+
+.contenedor .elemento input[type="submit"] {
+    background-color: rgb(0, 233, 144);
+    border: none;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    width: calc(100% - 40px);
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px; 
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-button {
+    background-color: rgb(0, 233, 144);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s; 
+    margin-left: 20px;
+}
+
+.nav-button:first-child {
+    margin-left: 0;
+}
+
+input[type="radio"] {
+    display: none;
+}
