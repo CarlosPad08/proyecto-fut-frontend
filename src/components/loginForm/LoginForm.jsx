@@ -18,6 +18,7 @@ const LoginForm = () => {
         password
       });
 
+      console.log('Respuesta del servidor:', response.data);
       const data = response.data;
 
       if (!data.success) {
@@ -28,9 +29,20 @@ const LoginForm = () => {
         // Guarda el token en el almacenamiento local o en el estado de la aplicación
         localStorage.setItem('token', data.token);
       }
-    } catch (err) {
-      console.error('Error en la solicitud:', err);
-      setError('Error en la solicitud');
+    } catch (error) {
+      if (error.response) {
+        // El servidor respondió con un código de estado fuera del rango 2xx
+        console.error('Error en la solicitud:', error.response.data);
+        setError(`Error: ${error.response.data.message}`);
+      } else if (error.request) {
+        // La solicitud fue hecha pero no se recibió respuesta
+        console.error('No se recibió respuesta del servidor:', error.request);
+        setError('No se recibió respuesta del servidor.');
+      } else {
+        // Algo sucedió al configurar la solicitud
+        console.error('Error al configurar la solicitud:', error.message);
+        setError(`Error: ${error.message}`);
+      }
     }
   };
 
