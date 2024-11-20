@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import './LoginForm.css';
 
 const LoginForm = () => {
@@ -11,15 +12,13 @@ const LoginForm = () => {
     const password = event.target.password.value;
 
     try {
-      const response = await fetch('http://localhost:3001/api/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ email, password })
+      console.log('Enviando solicitud de inicio de sesión...');
+      const response = await axios.post('http://localhost:3000/api/login', {
+        email,
+        password
       });
 
-      const data = await response.json();
+      const data = response.data;
 
       if (!data.success) {
         setError(data.message);
