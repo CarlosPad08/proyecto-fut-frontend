@@ -1,6 +1,31 @@
 import './App.css'
+import { useState } from 'react';
 
 function App() {
+  {/*Estado para manejar los mensajes de error*/}
+  const [error, setError] = useState(""); 
+
+  {/*Función para manejar el envío del formulario*/}
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Evitar que el formulario se envíe automáticamente
+    
+    const usuario = event.target.usuario.value;
+    const password = event.target.password.value;
+
+    {/*Validación de los campos*/}
+    if (!usuario && !password) {
+      setError("Debes ingresar el usuario y contraseña.");
+    } else if (!usuario) {
+      setError("Debes ingresar un usuario.");
+    } else if (!password) {
+      setError("Debes ingresar una contraseña.");
+    } else if (usuario !== "usuarioCorrecto" || password !== "contraseñaCorrecta") {
+      setError("Contraseña incorrecta.");
+    } else {
+      setError("");
+      alert("¡Inicio de sesión exitoso!");
+    }
+  };
 
   return (
     <>
@@ -19,7 +44,7 @@ function App() {
         {/* Contenedor que contiene el formulario de login */}
         <div className="contenedor">
             <h2>Iniciar sesión</h2>
-            <form id="forma" name="forma" method="post">
+            <form id="forma" name="forma" method="post" onSubmit={handleSubmit}>
                 <div className="elemento">
                     <label htmlFor="usuario">Usuario</label>
                     <input type="text" id="usuario" name="usuario" /*required="true"*//>
@@ -32,6 +57,9 @@ function App() {
                     <input type="submit" value="Ingresar"/>
                 </div>
             </form>
+
+            {/* Mostrar el mensaje de error si existe */}
+          {error && <div className="error-message">{error}</div>}
         </div>
       </div>
     </>
