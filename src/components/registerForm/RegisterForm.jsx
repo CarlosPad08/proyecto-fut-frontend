@@ -50,12 +50,20 @@ const RegisterForm = () => {
       <h2>Registrar</h2>
       <form id="forma" name="forma" method="post" onSubmit={handleSubmit}>
         <div className="elemento">
-          <label htmlFor="usuario">Usuario</label>
-          <input type="text" id="usuario" name="usuario" />
+          <label htmlFor="nombre">Nombre</label>
+          <input type="text" id="nombre" name="Nombre" />
+        </div>
+        <div className="elemento">
+          <label htmlFor="Telefono">Telefono</label>
+          <input type="text" id="Telefono" name="Telefono" />
+        </div>
+        <div className="elemento">
+          <label htmlFor="email">Correo electrónico</label>
+          <input type="text" id="email" name="Correo" />
         </div>
         <div className="elemento">
           <label htmlFor="password">Contraseña</label>
-          <input type="password" id="password" name="password" />
+          <input type="password" id="password" name="Contraseña" />
         </div>
         <div className="elemento">
           <input type="submit" value="Registrar" />
