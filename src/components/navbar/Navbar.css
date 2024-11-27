@@ -1,0 +1,28 @@
+/* Estilos para la barra de navegación */
+.navbar {
+    width: calc(100% - 40px);
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px; 
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+  
+.nav-button {
+    background-color: rgb(0, 233, 144);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s; 
+    margin-left: 20px;
+}
+  
+.nav-button:first-child {
+    margin-left: 0;
+}
