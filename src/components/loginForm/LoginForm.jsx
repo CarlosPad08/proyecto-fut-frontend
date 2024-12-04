@@ -48,7 +48,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="contenedor">
+    <div className="contenedorLogin">
       <h2>Iniciar sesión</h2>
       <form id="forma" name="forma" method="post" onSubmit={handleSubmit}>
         <div className="elemento">
@@ -60,7 +60,9 @@ const LoginForm = () => {
           <input type="password" id="password" name="password" />
         </div>
         <div className="elemento">
-          <input type="submit" value="Ingresar" />
+          < a href='../../pages/home/home.html'>
+            <input type="submit" value="Ingresar" />
+          </a>
         </div>
       </form>
       {error && <div className="error-message">{error}</div>}
