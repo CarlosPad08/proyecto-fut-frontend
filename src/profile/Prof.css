@@ -1,0 +1,116 @@
+.container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  /*Header*/
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    color: green;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .navButton {
+    padding: 10px 20px;
+    border: 1px solid green;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .profileButton {
+    background-color: green;
+    color: white;
+  }
+  
+  /* Main */
+  .main {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Plazas */
+  .plazas {
+    flex: 3;
+  }
+  
+  .plazaButton {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .disponible {
+    background-color: #d4f7cc;
+  }
+  
+  .ocupada {
+    background-color: #ffd6d6;
+  }
+  
+  .plazaImage {
+    height: 100px;
+    background-color: #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .plazaEstado {
+    font-weight: bold;
+  }
+  
+  /* Partidos */
+  .partidos {
+    flex: 1;
+  }
+  
+  .partidosLista {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .partido {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .partido.green {
+    color: green;
+  }
+  
+  .partido.orange {
+    color: orange;
+  }
+  
+  .partido.red {
+    color: red;
+  }
+  
+  /* Botón de historial */
+  .historyButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
