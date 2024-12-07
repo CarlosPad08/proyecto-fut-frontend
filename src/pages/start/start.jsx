@@ -1,3 +1,5 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 function start () {
@@ -12,8 +14,12 @@ function start () {
                 <h1 className="navbar-titulo">FutNow</h1>
             </div>
             <div className="navbar-der">
-                <button>Iniciar sesion</button>
-                <button>Registrarse</button>
+                <Link to="/login">
+                    <button>Iniciar sesion</button>
+                </Link>
+                <Link to="/register">
+                    <button>Registrarse</button>
+                </Link>
             </div>
         </nav>
         {/* Main */}
