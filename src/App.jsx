@@ -7,7 +7,7 @@ import RegisterForm from './components/registerForm/RegisterForm';
 function App() {
   return (
     <>
-      <div className='body'>
+      <div className='body-body'>
         <Start />
         {/* <Navbar />
         <input type="radio" id="toggle-login" />

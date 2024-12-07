@@ -1,15 +1,162 @@
 :root {
-    --color-primario: #007bff;
-    --color-secundario: #0056b3;
+    /* Paleta Clara */
+    --verde-pasto: #4CAF50; /* (Primario) */
+    --verde-pasto-claro: #54940a; /* (Secundario) */
+    --blanco: #FFFFFF; /* (Fondo claro) */
+    --gris-claro: #F5F5F5; /* (Detalles y texto secundario) */
+    --amarillo-balón: #FFEB3B; /* (Resaltados) */
+    --negro-suave: #212121; /* (Texto principal) */
+
+    /* Paleta Oscura */
+    --verde-campo-oscuro: #1B5E20; /* (Primario) */
+    --negro-intenso: #121212; /* (Fondo oscuro) */
+    --gris-oscuro: #424242; /* (Detalles y texto secundario) */
+    --amarillo-dorado: #FFC107;  /* (Resaltados) */
+    --blanco-humo: #E0E0E0; /* (Texto principal) */
 }
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
     box-sizing: border-box;
 }
 
+/* Estilos para el Navbar */
+.navbar-start {
+    background-color: var(--verde-pasto);
+    padding: 5px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 12vh;
+    z-index: 1000;
+}
 
-/* Estilos para el registro */
+.navbar-titulo {
+    margin-left: 15px;
+    font-family: fantasy;
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+}
+
+.navbar-izq {
+    color: var(--negro-suave);
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.navbar-izq .contenedor-img {
+    margin-left: 15px;
+    width: 4rem;
+    height: 4rem;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+}
+
+.navbar-izq .logo-navbar {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.8);
+}
+
+.navbar-der {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.navbar-der button {
+    background-color: var(--verde-campo-oscuro);
+    color: var(--blanco);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 30px;
+    width: 10rem;
+    text-decoration: none;
+    transition: var(--verde-campo-oscuro) 0.3s ease;
+}
+
+.navbar-der button:hover {
+    background-color: var(--verde-pasto-claro);
+}
+
+
+/* Estilos para el main */
+.main-start {
+    background-image: url(../../../public/estadio.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 2vh;
+    height: 100%;
+}
+
+.main-izq {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-izq .contenedor-vista {
+    background-color: rgb(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    height: 60%;
+    border: 2px solid var(--verde-pasto);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.main-der {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.main-der .contenedor-registro {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    height: 60%;
+    border: 2px solid var(--verde-pasto);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.main-der .contenedor-registro .form-registro label, input, button {
+    display: block;
+    width: 100%;
+    padding: 2px;
+    margin: 2px;
+}
+
+.main-der .contenedor-registro .form-registro button {
+    margin-top: 12px;
+}
+
+/* Estilos del footer */
+.footer-start {
+    background-color: rgb(255, 255, 255, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+}

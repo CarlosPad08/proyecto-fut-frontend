@@ -4,21 +4,25 @@ function start () {
   return (
     <div>
         {/* Navbar */}
-        <nav>
+        <nav className="navbar-start">
             <div className="navbar-izq">
-                <img src="/assets/logo.png" alt="FutNow" />
-                <h1>FutNow</h1>
+                <div className="contenedor-img">
+                    <img className="logo-navbar" src="../../../public/logo2.png" alt="FutNow" />
+                </div>
+                <h1 className="navbar-titulo">FutNow</h1>
             </div>
             <div className="navbar-der">
-                <a href="/login">Iniciar sesión</a>
-                <a href="/register">Registrarse</a>
+                <button>Iniciar sesion</button>
+                <button>Registrarse</button>
             </div>
         </nav>
         {/* Main */}
-        <main>
+        <main className="main-start">
             <div className="main-izq">
-                <h2>¡Bienvenido a FutNow!</h2>
-                <p>Para comenzar a disfrutar de FutNow, inicia sesión o regístrate.</p>
+                <div className="contenedor-vista">
+                    <h2>¡Bienvenido a FutNow!</h2>
+                    <p>Para comenzar a disfrutar de FutNow, inicia sesión o regístrate.</p>
+                </div>
             </div>
             <div className="main-der">
                 <div className="contenedor-registro">
@@ -45,7 +49,7 @@ function start () {
             </div>
         </main>
         {/* Footer */}
-        <footer>
+        <footer className="footer-start">
             <p>© 2020 FutNow. Todos los derechos reservados.</p>
         </footer>
     </div>
