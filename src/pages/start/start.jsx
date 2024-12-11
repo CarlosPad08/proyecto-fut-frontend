@@ -4,7 +4,7 @@ import './styles.css';
 
 function start () {
   return (
-    <div>
+    <div className='body-start'>
         {/* Navbar */}
         <nav className="navbar-start">
             <div className="navbar-izq">

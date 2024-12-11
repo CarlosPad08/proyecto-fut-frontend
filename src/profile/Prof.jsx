@@ -2,7 +2,7 @@
 import React from "react";
 import "./Profiles.css";
 
-const App = () => {
+const Appp = () => {
   const plazas = [
     {
       id: 1,
@@ -100,4 +100,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Appp;

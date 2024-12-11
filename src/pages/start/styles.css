@@ -15,7 +15,7 @@
     --blanco-humo: #E0E0E0; /* (Texto principal) */
 }
 
-body {
+.body-start {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;

@@ -1,19 +1,22 @@
 import './App.css';
 import Start from './pages/start/start';
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar/navbar';
 import LoginForm from './components/loginForm/Loginform';
 import RegisterForm from './components/registerForm/RegisterForm';
+import Home from './profile/Prof';
 
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route path="/" exact component={Start} />
-        <Route path="/register" component={RegisterForm} />
-        <Route path="/login" component={LoginForm} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Start />} />
+        <Route path="/navbar" element={<Navbar />} />
+        <Route path="/register" element={<RegisterForm />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/home" element={<Home />} />
+      </Routes>
     </Router>
   );
 }

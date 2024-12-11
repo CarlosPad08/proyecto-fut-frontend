@@ -48,24 +48,26 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="contenedorLogin">
-      <h2>Iniciar sesión</h2>
-      <form id="forma" name="forma" method="post" onSubmit={handleSubmit}>
-        <div className="elemento">
-          <label htmlFor="usuario">Usuario</label>
-          <input type="text" id="usuario" name="usuario" />
-        </div>
-        <div className="elemento">
-          <label htmlFor="password">Contraseña</label>
-          <input type="password" id="password" name="password" />
-        </div>
-        <div className="elemento">
-          < a href='../../pages/home/home.html'>
+    // eslint-disable-next-line no-unused-expressions
+    // eslint-disable-next-line no-undef
+    <div className='body-login'>
+      <div className="contenedorLogin">
+        <h2>Iniciar sesión</h2>
+        <form id="forma" name="forma" method="post" onSubmit={handleSubmit}>
+          <div className="elemento">
+            <label htmlFor="usuario">Usuario</label>
+            <input type="text" id="usuario" name="usuario" required/>
+          </div>
+          <div className="elemento">
+            <label htmlFor="password">Contraseña</label>
+            <input type="password" id="password" name="password" required/>
+          </div>
+          <div className="elemento">
             <input type="submit" value="Ingresar" />
-          </a>
-        </div>
-      </form>
-      {error && <div className="error-message">{error}</div>}
+          </div>
+        </form>
+        {error && <div className="error-message">{error}</div>}
+      </div>
     </div>
   );
 };
