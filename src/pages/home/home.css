@@ -1,0 +1,76 @@
+.main-start-home {
+    background-color: var(--verde-campo-oscuro);
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 2vh;
+    height: 100%;
+}
+
+.main-izq-canchas {
+    display: inline;
+    position: relative;
+    top: 11.5vh;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+.main-der-info {
+    display: inline;
+    position: relative;
+    top: 11.5vh;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+.cancha {
+    display: flex;
+    background-image: url(../../../public/cancha.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid var(--blanco);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 28%;
+}
+
+.estadisticas-equipo {
+    display: flex;
+    background-color: var(--verde-pasto-claro);
+    border: 2px solid var(--blanco);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 35%;
+}
+
+.proximos-partidos {
+    display: flex;
+    background-color: var(--verde-pasto-claro);
+    border: 2px solid var(--blanco);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 21%;
+}
+
+.horarios-disponibles {
+    display: flex;
+    background-color: var(--verde-pasto-claro);
+    border: 2px solid var(--blanco);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 28%;
+}
+
+/* .titulo-main-der {
+    display: flex;
+    background-color: var(--verde-pasto-claro);
+    border: 2px solid var(--blanco);
+    justify-content: center;
+} */

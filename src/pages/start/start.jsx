@@ -4,7 +4,7 @@ import './styles.css';
 
 function start () {
   return (
-    <div className='body-start'>
+    <>
         {/* Navbar */}
         <nav className="navbar-start">
             <div className="navbar-izq">
@@ -58,7 +58,7 @@ function start () {
         <footer className="footer-start">
             <p>© 2020 FutNow. Todos los derechos reservados.</p>
         </footer>
-    </div>
+    </>
   );
 }
 
